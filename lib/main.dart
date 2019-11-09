@@ -78,8 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: <Widget>[
               GroupFlex(300),
-              GroupFlex(200),
-              GroupFlex(100),
+              GroupFlex(250),
+              GroupFlex(120),
             ],
           ),
         ),
@@ -108,7 +108,6 @@ class GroupFlex extends StatelessWidget {
           Flexible(
             flex: 1,
             child: Flex(
-              mainAxisSize: MainAxisSize.max,
               direction: Axis.vertical,
               children: <Widget>[
                 AspectRatio(
@@ -130,7 +129,21 @@ class GroupFlex extends StatelessWidget {
             flex: 3,
             child: AspectRatio(
               aspectRatio: 1,
-              child: Image.asset('assets/image_4.jpeg', fit: BoxFit.cover),
+              child: Flex(
+                direction: Axis.vertical,
+                children: <Widget>[
+                  AspectRatio(
+                    aspectRatio: 2,
+                    child:
+                        Image.asset('assets/image_4.jpeg', fit: BoxFit.cover),
+                  ),
+                  AspectRatio(
+                    aspectRatio: 2,
+                    child:
+                        Image.asset('assets/image_5.jpeg', fit: BoxFit.cover),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
